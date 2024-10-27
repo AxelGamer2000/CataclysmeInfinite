@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "overrides": [
+    {
+      "model": "catainf:item/electric_sword/1",
+      "predicate": {
+        "catainf:level": 1.0
+      }
+    },
+    {
+      "model": "catainf:item/electric_sword/2",
+      "predicate": {
+        "catainf:level": 2.0
+      }
+    },
+    {
+      "model": "catainf:item/electric_sword/3",
+      "predicate": {
+        "catainf:level": 3.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "catainf:item/electric_sword_1"
+  }
+}

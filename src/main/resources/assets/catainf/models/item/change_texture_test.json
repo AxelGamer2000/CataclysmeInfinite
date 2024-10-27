@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "catainf:item/change_texture_test/1",
+      "predicate": {
+        "catainf:level": 1.0
+      }
+    },
+    {
+      "model": "catainf:item/change_texture_test/2",
+      "predicate": {
+        "catainf:level": 2.0
+      }
+    },
+    {
+      "model": "catainf:item/change_texture_test/3",
+      "predicate": {
+        "catainf:level": 3.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "catainf:item/change_texture_test_1"
+  }
+}
