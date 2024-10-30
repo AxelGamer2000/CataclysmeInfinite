@@ -4,6 +4,7 @@ import com.axelgamer.catainf.CataInf;
 import com.axelgamer.catainf.item.ChangeTextureTestItem;
 import com.axelgamer.catainf.item.ElectricSwordItem;
 import com.axelgamer.catainf.item.ModItems;
+import com.axelgamer.catainf.item.RealityWatchItem;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -36,6 +37,16 @@ public final class ModClients {
                         // Parameters are the used item stack, the level context, the player using the item,
                         // and a random seed you can use.
                         (stack, level, player, seed) -> ElectricSwordItem.GetLevel(stack)
+                );
+                ItemProperties.register(
+                        // The item to apply the property to.
+                        ModItems.REALITY_WATCH.get(),
+                        // The id of the property.
+                        ResourceLocation.fromNamespaceAndPath(CataInf.MODID, RealityWatchItem.ACTIVED_KEY),
+                        // A reference to a method that calculates the override value.
+                        // Parameters are the used item stack, the level context, the player using the item,
+                        // and a random seed you can use.
+                        (stack, level, player, seed) -> RealityWatchItem.GetActived(stack)
                 );
             });
         }

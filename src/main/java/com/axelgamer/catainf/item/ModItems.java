@@ -31,4 +31,9 @@ public class ModItems {
             () -> new ElectricSwordItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 0, 0)))
     );
 
+    public static final DeferredItem<Item> REALITY_WATCH = ITEMS.register(
+            "reality_watch",
+            () -> new RealityWatchItem(new Item.Properties().stacksTo(1))
+    );
+
 }

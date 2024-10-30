@@ -22,6 +22,7 @@ public class ModCreativeTabs {
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.CHANGE_TEXTURE_TEST.get());
                 output.accept(ModItems.ELECTRIC_SWORD.get());
+                output.accept(ModItems.REALITY_WATCH.get());
             }).build());
 
 }
