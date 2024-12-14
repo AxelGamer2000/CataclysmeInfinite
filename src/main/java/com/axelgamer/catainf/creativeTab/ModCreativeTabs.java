@@ -23,6 +23,12 @@ public class ModCreativeTabs {
                 output.accept(ModItems.CHANGE_TEXTURE_TEST.get());
                 output.accept(ModItems.ELECTRIC_SWORD.get());
                 output.accept(ModItems.REALITY_WATCH.get());
+                output.accept(ModItems.DYNAMITE.get());
+                output.accept(ModItems.SWORD_OF_LIGHTNING_SWORD.get());
+                output.accept(ModItems.EMPTY_SYRINGE.get());
+                output.accept(ModItems.SYRINGE.get());
+                output.accept(ModItems.PASSCARD.get());
+                output.accept(ModItems.PASSCARD_READER_ITEM.get());
             }).build());
 
 }

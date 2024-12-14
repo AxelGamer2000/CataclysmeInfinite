@@ -6,11 +6,15 @@ import com.axelgamer.catainf.item.ElectricSwordItem;
 import com.axelgamer.catainf.item.ModItems;
 import com.axelgamer.catainf.item.RealityWatchItem;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.FastColor;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
 public final class ModClients {
     @EventBusSubscriber(modid = CataInf.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
@@ -49,6 +53,26 @@ public final class ModClients {
                         (stack, level, player, seed) -> RealityWatchItem.GetActived(stack)
                 );
             });
+
+
+        }
+
+        @SubscribeEvent
+        public static void registerItemColorHandlers(RegisterColorHandlersEvent.Item event) {
+            // Parameters are the item stack and the tint index.
+            event.register((stack, tintIndex) -> {
+                        // Like above, replace with your own calculation. Vanilla values are in the ItemColors class.
+                        // Also like above, tint index -1 means no tint and should use a default value instead.
+                        if(tintIndex == 1) {
+                            return FastColor.ARGB32.opaque(stack.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY).getColor());
+                        } else {
+                            return 0xFFFFFFFF;
+                        }
+                    },
+                    // A varargs of items to apply the tinting to
+                    ModItems.SYRINGE);
         }
     }
+
+
 }

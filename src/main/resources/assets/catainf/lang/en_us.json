@@ -5,5 +5,11 @@
 
   "item.catainf.change_texture_test": "Change Texture Test",
   "item.catainf.electric_sword": "Electric Sword",
-  "item.catainf.reality_watch": "Reality Watch"
+  "item.catainf.reality_watch": "Reality Watch",
+  "item.catainf.dynamite": "Dynamite",
+  "item.catainf.sword_of_lightning_bolt": "Sword of Lightning Bolt",
+  "item.catainf.syringe": "Syringe",
+  "item.catainf.empty_syringe": "Empty Syringe",
+  "item.catainf.passcard": "PassCard",
+  "block.catainf.passcard_reader": "PassCard Reader"
 }

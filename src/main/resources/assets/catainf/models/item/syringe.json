@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "catainf:item/syringe",
+    "layer1": "catainf:item/syringe_overlay"
+  }
+}

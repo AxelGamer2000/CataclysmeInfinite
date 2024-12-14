@@ -27,6 +27,9 @@ public final class ModDataComponents {
     public static final Supplier<DataComponentType<Boolean>> ACTIVED = registerDataComponentType("actived",
             () -> builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL));
 
+    public static final Supplier<DataComponentType<Integer>> PASSCARD_ID = registerDataComponentType("passcard_id",
+            () -> builder -> builder.persistent(Codec.INT).networkSynchronized(ByteBufCodecs.INT));
+
     public static <T> Supplier<DataComponentType<T>> registerDataComponentType(
             String name, Supplier<UnaryOperator<DataComponentType.Builder<T>>> builderOperator) {
         return DATA_COMPONENT_TYPES.register(name, () -> builderOperator.get().apply(DataComponentType.builder()).build());

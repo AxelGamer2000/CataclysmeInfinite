@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "catainf:block/passcard_reader",
+    "side": "catainf:block/passcard_reader_sides"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "catainf:block/passcard_reader"
+    }
+  }
+}

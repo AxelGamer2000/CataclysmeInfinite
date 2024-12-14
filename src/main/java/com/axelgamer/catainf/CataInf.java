@@ -3,6 +3,7 @@ package com.axelgamer.catainf;
 import com.axelgamer.catainf.block.ModBlocks;
 import com.axelgamer.catainf.component.ModDataComponents;
 import com.axelgamer.catainf.creativeTab.ModCreativeTabs;
+import com.axelgamer.catainf.entity.ModEntities;
 import com.axelgamer.catainf.item.ModItems;
 import org.slf4j.Logger;
 
@@ -37,6 +38,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CataInf.MODID)
@@ -64,6 +66,8 @@ public class CataInf
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         ModDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
+
+        ModEntities.ENTITY_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
